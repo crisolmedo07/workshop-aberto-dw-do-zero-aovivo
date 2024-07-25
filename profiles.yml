@@ -1,0 +1,13 @@
+datawarehose_py:
+  target: prod
+  outputs:
+    prod:
+      type: {{ env_var('DB_TYPE_PROD') }}  
+      host: {{ env_var('DB_HOST_PROD') }}  
+      user: {{ env_var('DB_USER_PROD') }}
+      pass: {{ env_var('DB_PASS_PROD') }}
+      port: {{ env_var('DB_PORT_PROD') }}    
+      dbname: {{ env_var('DB_NAME_PROD') }}
+      schema: {{ env_var('DB_SCHEMA_PROD') }}
+      threads: {{env_var('DB_THREADS_PROD')}}
+      keepalives_idle: 0

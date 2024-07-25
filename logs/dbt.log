@@ -1,0 +1,28 @@
+[0m13:33:47.603017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DC4C66D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DEFBA490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DEFBA250>]}
+
+
+============================== 13:33:47.612014 | a1bcc6f6-0274-46e2-94e4-7b5774c02173 ==============================
+[0m13:33:47.612014 [info ] [MainThread]: Running with dbt=1.8.4
+[0m13:33:47.615014 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '../', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:34:17.330561 [debug] [MainThread]: Starter project path: C:\Users\Versat\Desktop\curso_de_python\Jornada_dos_dados_Luciano_Vasconcelos\DW_python_SQL_dbt_core\workshop-aberto-dw-do-zero-aovivo\.venv\lib\site-packages\dbt\include\starter_project
+[0m13:34:17.496013 [info ] [MainThread]: 
+Your new dbt project "datawarehose_py" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:34:17.502011 [info ] [MainThread]: Setting up your profile.
+[0m13:36:32.104240 [info ] [MainThread]: Profile datawarehose_py written to ..\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:36:32.108242 [debug] [MainThread]: Command `dbt init` succeeded at 13:36:32.108242 after 164.64 seconds
+[0m13:36:32.111247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DC4C66D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DEFBA1F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000134DEF61AF0>]}
+[0m13:36:32.113248 [debug] [MainThread]: Flushing usage events
