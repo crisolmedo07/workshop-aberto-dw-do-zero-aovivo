@@ -19,7 +19,7 @@ DB_USER = os.getenv('DB_USER_PROD')
 DB_PASS = os.getenv('DB_PASS_PROD')
 DB_SCHEMA = os.getenv('DB_SCHEMA_PROD')
     
-DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}"
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 engine = create_engine(DATABASE_URL)
 
@@ -42,6 +42,7 @@ def buscar_todos_dados_commodities(commodities):
 # salvar no banco de datos
 def salvar_no_postgres( df , schema = 'public'):
     df.to_sql('commodities' , engine , if_exists = 'replace' , index = True , index_label = 'Date' , schema = schema ) #if_exists = append (agregar datos)
+
 if __name__ == "__main__":
     dados_concatenados = buscar_todos_dados_commodities(commodities)
     salvar_no_postgres(dados_concatenados , schema='public')
