@@ -2,6 +2,7 @@
 import os
 import pandas as pd
 import streamlit as st 
+import plotly.express as px
 from sqlalchemy import create_engine
 from sqlalchemy.exc import ProgrammingError
 from dotenv import load_dotenv
@@ -46,4 +47,11 @@ Este Dashboard es para mostrar los datos de commodities y sus transacciones
 
 df = get_data()
 
+# Mostrar dataframe
 st.dataframe( df)
+
+# Crear gráfico de barras invertido
+fig = px.bar(df, x='value', y='commodity', orientation='h', title='Valores de Commodities')
+
+# Mostrar gráfico en el dashboard
+st.plotly_chart(fig)
