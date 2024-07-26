@@ -50,8 +50,12 @@ df = get_data()
 # Mostrar dataframe
 st.dataframe( df)
 
+df_valor = df[['simbolo' , 'valor']].sort_values( by = 'valor' , ascending=True)
+
 # Crear gráfico de barras invertido
-fig = px.bar(df, x='value', y='commodity', orientation='h', title='Valores de Commodities')
+fig = px.bar(df_valor, x='valor', y='simbolo', orientation='h', title='Valores de Commodities')
 
 # Mostrar gráfico en el dashboard
 st.plotly_chart(fig)
+
+df_ganho = df[['simbolo' , 'ganho']].sort_values( by = 'ganho' , ascending=True) 
